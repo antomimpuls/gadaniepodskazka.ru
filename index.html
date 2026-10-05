@@ -32,7 +32,7 @@ const SITE_SETTINGS = {
   'redirectDelaySeconds': 15,
   'siteUrl': 'https://gadaniepodskazka.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
-  'telegramEnabled': 1,
+  'telegramEnabled': true,
   'telegramNickname': 'Eleonora003',
   'yandexMetrikaId': '113326709',
   'psychicImageURL': 'https://gadaniepodskazka.ru/photo-c9d10013de344e059889d49a2c144718.jpg',
@@ -51,9 +51,9 @@ const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}
 
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
 
-const WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}?text=${ENCODED_MESSAGE}`:'';
+const WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
-const FALLBACK_WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}`:'https://wa.me/79614073808';
+const FALLBACK_WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 
@@ -61,7 +61,7 @@ const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
 
-const TELEGRAM_URL=TELEGRAM_ENABLED&&TELEGRAM_NICKNAME?`https://t.me/${TELEGRAM_NICKNAME}?text=${ENCODED_MESSAGE}`:'';
+const TELEGRAM_URL="https://t.me/Eleonora003?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 
 const SITE_STATS_TRACKER_CONFIG = {
@@ -696,6 +696,7 @@ footer{background:#090814;padding:40px 0;text-align:center;border-top:1px solid 
 .studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://gadaniepodskazka.ru/photo-c9d10013de344e059889d49a2c144718.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
 .hero-img #psychicImage{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
 </style>
+<!-- CONVERSIA_CONTACT_CONTRACT_V1 a66f3e4d6a253a4c902cc37d1a2130252b120022d7e66dfa066add311cd28766 -->
 </head>
 
 <body>
@@ -704,9 +705,9 @@ footer{background:#090814;padding:40px 0;text-align:center;border-top:1px solid 
 
 <div class="sticky-messengers" id="stickyMessengers">
 
-<a data-msg-url="https://wa.me/79614073808" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
+<a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
 
-<a data-msg-url="https://t.me/anna_more_magic" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
+<a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
 
 </div>
 
@@ -742,9 +743,9 @@ footer{background:#090814;padding:40px 0;text-align:center;border-top:1px solid 
 
         <div class="hero-cta">
 
-        <a data-msg-url="https://wa.me/79614073808" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
+        <a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
 
-        <a data-msg-url="https://t.me/anna_more_magic" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
+        <a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
 
         </div>
 
@@ -1540,7 +1541,7 @@ footer{background:#090814;padding:40px 0;text-align:center;border-top:1px solid 
 
         <p>Адрес: 123112, г. Москва, Пресненская наб., д. 8, офис 1205</p>
 
-        <p>Телефон: +7 (961) 407-38-08</p>
+        <p>Телефон: +7 (917) 588-05-92</p>
 
         <p>Email: info@gadaniepodskazka.ru</p>
 
@@ -1610,7 +1611,7 @@ footer{background:#090814;padding:40px 0;text-align:center;border-top:1px solid 
 
         <div class="company-info">
 
-        <p>Телефон: <a href="tel:+7 (961) 407-38-08" style="color:#34c0e6;text-decoration:none">+7 (961) 407-38-08</a></p>
+        <p>Телефон: <a href="tel:+79175880592" style="color:#34c0e6;text-decoration:none">+7 (917) 588-05-92</a></p>
 
         <p>Email: <a href="mailto:info@gadaniepodskazka.ru" style="color:#34c0e6;text-decoration:none">info@gadaniepodskazka.ru</a></p>
 
